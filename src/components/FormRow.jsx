@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 function FormRow({ type, name, value, handleChange, labelText }) {
   return (
     <div className="form-row">
