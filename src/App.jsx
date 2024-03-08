@@ -1,10 +1,23 @@
-import Landing from "./pages/Landing"
+import { RouterProvider, createBrowserRouter } from "react-router-dom"
+import { Landing, Dashboard, Error, Register } from "./pages"
+
+const router = createBrowserRouter([
+  { path: "landing", element: <Landing />, errorElement: <Error /> },
+  {
+    path: "/",
+    element: <Dashboard />,
+    errorElement: <Error />,
+  },
+  { path: "register", element: <Register />, errorElement: <Error /> },
+])
 
 function App() {
   return (
-    <div>
-      <Landing />
-    </div>
+    <RouterProvider router={router}>
+      <div>
+        <Landing />
+      </div>
+    </RouterProvider>
   )
 }
 
