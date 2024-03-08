@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
 const Wrapper = styled.main`
   text-align: center;
@@ -13,6 +13,7 @@ const Wrapper = styled.main`
   justify-content: center;
   h3 {
     margin-bottom: 0.5rem;
+    text-transform: capitalize;
   }
   p {
     margin-top: 0;
@@ -24,6 +25,6 @@ const Wrapper = styled.main`
     text-decoration: underline;
     text-transform: capitalize;
   }
-`;
+`
 
-export default Wrapper;
+export default Wrapper
