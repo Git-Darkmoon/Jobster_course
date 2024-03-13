@@ -1,5 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import { Landing, Dashboard, Error, Register } from "./pages"
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 const router = createBrowserRouter([
   { path: "landing", element: <Landing />, errorElement: <Error /> },
@@ -13,11 +15,14 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <RouterProvider router={router}>
-      <div>
-        <Landing />
-      </div>
-    </RouterProvider>
+    <>
+      <ToastContainer position="top-center" />
+      <RouterProvider router={router}>
+        <div>
+          <Landing />
+        </div>
+      </RouterProvider>
+    </>
   )
 }
 
