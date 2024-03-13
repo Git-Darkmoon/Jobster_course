@@ -3,6 +3,8 @@ import { FormRow, Logo } from "../components"
 import Wrapper from "../assets/wrappers/RegisterPage"
 import { toast } from "react-toastify"
 
+// commit test
+
 const initialState = {
   name: "",
   email: "",
