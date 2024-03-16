@@ -1,5 +1,5 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
-import { Landing, Error, Register } from "./pages"
+import { Landing, Error, Register, ProtectedRoute } from "./pages"
 import {
   AddJob,
   AllJobs,
@@ -13,7 +13,11 @@ import "react-toastify/dist/ReactToastify.css"
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <SharedLayout />,
+    element: (
+      <ProtectedRoute>
+        <SharedLayout />
+      </ProtectedRoute>
+    ),
     errorElement: <Error />,
     children: [
       {
