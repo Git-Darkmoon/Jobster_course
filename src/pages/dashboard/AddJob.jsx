@@ -82,7 +82,7 @@ const AddJob = () => {
             <button
               type="button"
               className="btn btn-block clear-btn"
-              onClick={dispatch(clearValues())}
+              onClick={() => dispatch(clearValues())}
             >
               clear
             </button>
