@@ -1,12 +1,18 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react"
 import Wrapper from "../assets/wrappers/JobsContainer"
 import { useSelector, useDispatch } from "react-redux"
 import Job from "./Job"
 import Loading from "./Loading"
+import { getAllJobs } from "../features/allJobs/allJobsSlice"
 
 const JobsContainer = () => {
   const { jobs, isLoading } = useSelector((store) => store.allJobs)
   const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getAllJobs())
+  }, [])
 
   if (isLoading) {
     return <Loading center />
