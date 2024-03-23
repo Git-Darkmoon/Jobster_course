@@ -8,13 +8,7 @@ function NavLinks({ toggle }) {
         const { id, text, path } = link
 
         return (
-          <NavLink
-            key={id}
-            to={path}
-            className="nav-link"
-            activeClassName="active"
-            onClick={toggle}
-          >
+          <NavLink key={id} to={path} className="nav-link" onClick={toggle}>
             <span className="icon">{<link.icon />}</span>
             {text}
           </NavLink>

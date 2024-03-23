@@ -5,16 +5,16 @@ import { getUserFromLocalStorage } from "../../utils/localStorage"
 import { logoutUser } from "../user/userSlice"
 
 const initialState = {
-  isLoading: false,
-  position: "",
   company: "",
-  jobLocation: "",
-  jobTypeOptions: ["full-time", "part-time", "remote", "internship"],
-  jobType: "full-time",
-  statusOptions: ["interview", "declined", "pending"],
-  status: "pending",
-  isEditing: false,
   editJobId: "",
+  isEditing: false,
+  isLoading: false,
+  jobLocation: "",
+  jobType: "full-time",
+  jobTypeOptions: ["full-time", "part-time", "remote", "internship"],
+  position: "",
+  status: "pending",
+  statusOptions: ["interview", "declined", "pending"],
 }
 
 export const createJob = createAsyncThunk(
@@ -49,6 +49,7 @@ const jobSlice = createSlice({
     clearValues: () => {
       return {
         ...initialState,
+        jobLocation: getUserFromLocalStorage()?.location || "",
       }
     },
   },
