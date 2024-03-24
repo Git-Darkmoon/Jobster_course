@@ -54,7 +54,7 @@ const allJobsSlice = createSlice({
       })
       .addCase(getAllJobs.rejected, (state, { payload }) => {
         state.isLoading = false
-        toast.error(payload)
+        toast.warn(payload)
       })
   },
 })
