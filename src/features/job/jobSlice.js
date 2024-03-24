@@ -27,6 +27,7 @@ export const createJob = createAsyncThunk(
         },
       })
       thunkAPI.dispatch(clearValues())
+      toast.success("Job Created...")
       return resp.data
     } catch (error) {
       // logout user
