@@ -6,6 +6,7 @@ import BigSidebar from "./BigSidebar"
 import JobsContainer from "./JobsContainer"
 import SearchContainer from "./SearchContainer"
 import Job from "./Job"
+import JobInfo from "./JobInfo"
 
 export {
   Logo,
@@ -16,4 +17,5 @@ export {
   JobsContainer,
   SearchContainer,
   Job,
+  JobInfo,
 }
